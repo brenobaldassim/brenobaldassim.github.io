@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --app-color-base: #000;
-  --app-color-principal: #0e402d;
-  --app-color-secondary: #9fcc2e;
-  --app-color-grey: #5a6650;
-  --app-color-principal-grey: #295135;
+  --app-color-base: #1D1D1D;
+  --app-color-base-dark: #111111;
+  --app-color-base-light: #3E3E3E;
+  --app-color-base-green: #2D3A3A;
+  --app-color-dark: #248232;
+  --app-color-light: #2BA84A;
+  --app-color-white: #FCFFFC;
 }
 
 *,
@@ -147,26 +149,9 @@ body {
   background-color: var(--app-color-base);
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 0.1rem;
-  background-image: linear-gradient(
-    90deg,
-    var(--app-color-principal) 0%,
-    var(--app-color-secondary) 92.32%
-  );
-}
-
-.section {
-  opacity: 0;
-  transition: 0.5s;
+@font-face {
+  font-family: 'Intro';
+  src: url('/src/assets/Intro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="terminal text-2xl font-Roboto">
+  <div class="terminal text-7xl font-Roboto">
     <div class="screen">
-      <p class="line1">>&nbsp; Breno Baldassim</p>
-      <p class="line2">>&nbsp; FullStack Web Developer<span class="cursor">_</span></p>
+      <p class="line1">Breno Baldassim </p>
+      <p class="line2">FullStack Web Developer<span class="cursor text-7xl">_</span></p>
       <p class="line3">teste</p>
     </div>
   </div>
@@ -13,7 +13,10 @@
 <style>
 .screen {
   margin: 0;
-  padding: 16px 16px 0px 16px;
+}
+
+.screen p {
+  font-family: 'Intro';
 }
 
 p {
@@ -33,7 +36,7 @@ span {
 }
 
 .line1 {
-  color: #9fcc2e;
+  color: var(--app-color-light);
   animation: type 1s 0.5s steps(20, end) forwards;
 }
 
@@ -66,7 +69,7 @@ span {
 
 @keyframes type {
   to {
-    width: 25em;
+    width: 100%;
   }
 }
 </style>
