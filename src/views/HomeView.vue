@@ -15,11 +15,17 @@ import Section from '@/components/Section.vue'
 </main>
 </template>
 
-<style scoped>
-
-.main {
-  margin-left: 200px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+<style >
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }  
 }
 
+@media (min-width: 768px) {
+    .main {
+        margin-left: 200px; /* Same as the width of the sidebar */
+        padding: 0px 10px;
+    }   
+}
 </style>

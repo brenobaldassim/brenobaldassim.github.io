@@ -20,12 +20,14 @@
     <div class="text-3xl mt-8 flex flex-row gap-0.5">
       <a
         class="btn"
+        target="_blank"
         href="https://github.com/brenobaldassim"
       >
         <i class='bx bxl-github'></i>
       </a>
       <a
         class="btn ml-1"
+        target="_blank"
         href="https://www.linkedin.com/in/breno-baldassim-bb2138196/"
       >
         <i class='bx bxl-linkedin'></i>
@@ -35,6 +37,7 @@
 </template>
 
 <style>
+
 .sidebar {
   position: fixed;
   float:left;
@@ -59,8 +62,10 @@
   height: 200px;
 }
 
-.title img {
-
+.title img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  transition-timing-function: ease-out;
 }
 
 .sidebar ul li {
@@ -82,6 +87,7 @@
 .sidebar ul li a:hover{
   margin-left: 20px;
   transition: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .sidebar ul li a span {

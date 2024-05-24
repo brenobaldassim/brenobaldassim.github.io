@@ -1,11 +1,12 @@
 <script setup></script>
 
 <template>
-  <div class="terminal text-7xl font-Roboto">
+  <div class="terminal text-8xl font-Roboto">
     <div class="screen">
-      <p class="line1">Breno Baldassim </p>
-      <p class="line2">FullStack Web Developer<span class="cursor text-7xl">_</span></p>
-      <p class="line3">teste</p>
+      <p class="line1">Breno </p>
+      <p class="line2">Baldassim </p>
+      <p class="line3">FullStack</p>
+      <p class="line4">Developer<span class="cursor text-8xl">_</span></p>
     </div>
   </div>
 </template>
@@ -21,7 +22,6 @@
 
 p {
   position: relative;
-  margin-top: 10px;
   text-align: left;
   font-size: 1.25em;
   font-family: monospace;
@@ -37,16 +37,24 @@ span {
 
 .line1 {
   color: var(--app-color-light);
-  animation: type 1s 0.5s steps(20, end) forwards;
+  animation: type 0.5s 0.5s steps(20, end) forwards;
 }
 
 .line2 {
+  color: var(--app-color-light);
+  animation: type 0.5s 1s steps(20, end) forwards;
+}
+.line3 {
   color: #fff;
-  animation: type 1s 1s steps(20, end) forwards;
+  animation: type 0.5s 1.5s steps(20, end) forwards;
+}
+.line4 {
+  color: #fff;
+  animation: type 0.5s 2s steps(20, end) forwards;
 }
 
 .cursor {
-  animation: blink 1s 1.75s infinite;
+  animation: blink 1s 2.75s infinite;
 }
 
 @keyframes blink {
@@ -71,5 +79,12 @@ span {
   to {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .line1, .line2, .line3, .line4, .cursor{
+      font-size: 50px;
+      white-space: normal;
+    }
 }
 </style>

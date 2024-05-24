@@ -1,9 +1,12 @@
-# webapp-portifolio-breno-baldassim
+# My WebApplication Portifolio:
 
-This project its a webapp portifolio for myself
-Developed with Vue.js and tailwindcss
+This project is a webapp portifolio for myself
+Developed with Vue.js and some tweaks on tailwindcss
 
-## Project Setup
+## version 1.0.0 layout:
+![print](image.png)
+
+### Project Setup
 
 ```sh
 npm install
@@ -13,22 +16,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
