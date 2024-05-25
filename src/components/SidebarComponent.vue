@@ -1,20 +1,28 @@
-<script setup></script>
+<script setup>
+const scrollToId = (id) =>{
+    let e = document.getElementById(id);
+    e.scrollIntoView({behavior: "instant", inline:"nearest"});
+}
+</script>
 
 <template>
   <div class="sidebar font-Roboto flex flex-col items-center">
     <h2 class="title"> <img src="/src/assets/breno-baldassim_logo.png"/> </h2>
     <ul class="nav text-xl w-full">
       <li>
-        <a href="#"><span>About Me</span></a>
+        <a @click="scrollToId('resume')"><span>Resume</span></a>
       </li>
       <li>
-        <a href="#"><span>My Skills</span></a>
+        <a @click="scrollToId('about-me')"><span>About Me</span></a>
       </li>
       <li>
-        <a href="#"><span>Projects</span></a>
+        <a @click="scrollToId('my-skills')"><span>My Skills</span></a>
       </li>
       <li>
-        <a href="#"><span>Contact</span></a>
+        <a @click="scrollToId('projects')"><span>Projects</span></a>
+      </li>
+      <li>
+        <a @click="scrollToId('contact')"><span>Contact</span></a>
       </li>
     </ul>
     <div class="text-3xl mt-8 flex flex-row gap-0.5">

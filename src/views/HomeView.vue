@@ -1,14 +1,23 @@
 <script setup>
-import Sidebar from '@/components/Sidebar.vue'
-import Section from '@/components/Section.vue'
+import SidebarComponent from '@/components/SidebarComponent.vue';
+import ResumeSection from '@/components/sections/ResumeSection.vue';
+import SectionItem from '@/components/SectionItem.vue';
+import AboutMeSection from '@/components/sections/AboutMeSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import MySkillsSection from '@/components/sections/MySkillsSection.vue';
+import ContactSection from '@/components/sections/ContactSection.vue';
 </script>
 
 <template>
 <main class="font-DM">
     <div class="">
-        <Sidebar />
+        <SidebarComponent />
         <div class="main">
-            <Section />
+            <SectionItem :id="'resume'" :component="ResumeSection" />
+            <SectionItem :id="'about-me'" :component="AboutMeSection" />
+            <SectionItem :id="'my-skills'" :component="MySkillsSection" />
+            <SectionItem :id="'projects'" :component="ProjectsSection" />
+            <SectionItem :id="'contact'" :component="ContactSection" />
         </div>
         
     </div>
@@ -16,6 +25,10 @@ import Section from '@/components/Section.vue'
 </template>
 
 <style >
+html {
+    scroll-snap-type: y mandatory;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;
