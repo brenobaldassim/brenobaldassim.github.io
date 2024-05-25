@@ -2,9 +2,9 @@
 </script>
 
 <template>
-    <section >
+    <div >
         <div class="text-8xl">TO DO: about-me</div>
-    </section>
+    </div>
 </template>
 
 <style scoped>
