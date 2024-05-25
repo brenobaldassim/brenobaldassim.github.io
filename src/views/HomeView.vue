@@ -10,7 +10,6 @@ import ContactSection from '@/components/sections/ContactSection.vue';
 
 <template>
 <main class="font-DM">
-    <div class="">
         <SidebarComponent />
         <div class="main">
             <SectionItem :id="'resume'" :component="ResumeSection" />
@@ -19,14 +18,19 @@ import ContactSection from '@/components/sections/ContactSection.vue';
             <SectionItem :id="'projects'" :component="ProjectsSection" />
             <SectionItem :id="'contact'" :component="ContactSection" />
         </div>
-        
-    </div>
+        <footer></footer>
 </main>
 </template>
 
 <style >
 html {
     scroll-snap-type: y mandatory;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (max-width: 768px) {

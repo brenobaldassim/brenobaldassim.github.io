@@ -9,8 +9,8 @@ import TerminalComponent from '../TerminalComponent.vue'
                 <TerminalComponent />
             </div>
             <div class="greetings-btns text-app-base flex flex-row justify-start w-full mt-8">
-                <a class="download-btn rounded-full p-4" target="_blank"
-                href="/src/assets/resume/RESUME_BRENO_2024.pdf">Download CV</a>
+                <a class="btn download-btn rounded-full p-4" target="_blank"
+                href="/src/assets/resume/RESUME_BRENO_2024.pdf">Download Resume</a>
             </div>
         </div>
     </div>
@@ -29,10 +29,7 @@ import TerminalComponent from '../TerminalComponent.vue'
 .download-btn:hover {
     color: var(--app-color-base);
     background-color: var(--app-color-white);
-    border: none;
-    transform: scale(1.1);
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+    border-color: var(--app-color-white);
 }
 
 .greetings-btns {
