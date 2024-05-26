@@ -3,8 +3,8 @@
 <template>
   <div class="terminal text-8xl font-Roboto">
     <div class="screen">
-      <p class="line1">Breno </p>
-      <p class="line2">Baldassim </p>
+      <p class="line1">Breno</p>
+      <p class="line2">Baldassim</p>
       <p class="line3">FullStack</p>
       <p class="line4">Developer<span class="cursor text-8xl">_</span></p>
     </div>
@@ -13,6 +13,7 @@
 
 <style>
 .screen {
+  display: inline-block;
   margin: 0;
 }
 
@@ -21,13 +22,9 @@
 }
 
 p {
-  position: relative;
-  text-align: left;
-  font-size: 1.25em;
-  font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
-  width: 0;
+  width: 100%;
 }
 
 span {
@@ -37,20 +34,20 @@ span {
 
 .line1 {
   color: var(--app-color-light);
-  animation: type 0.5s 0.5s steps(20, end) forwards;
+  animation: type 0.5s 0.5s steps(9, end) both;
 }
 
 .line2 {
   color: var(--app-color-light);
-  animation: type 0.5s 1s steps(20, end) forwards;
+  animation: type 0.5s 1s steps(9, end) both;
 }
 .line3 {
   color: #fff;
-  animation: type 0.5s 1.5s steps(20, end) forwards;
+  animation: type 0.5s 1.5s steps(9, end) both;
 }
 .line4 {
   color: #fff;
-  animation: type 0.5s 2s steps(20, end) forwards;
+  animation: type 0.5s 2s steps(9, end) both;
 }
 
 .cursor {
@@ -76,14 +73,20 @@ span {
 }
 
 @keyframes type {
+  from {
+    width: 0;
+  }
   to {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .line1, .line2, .line3, .line4, .cursor{
-      font-size: 50px;
+  .cursor{
+    font-size: 40px;
+  }
+  .line1, .line2, .line3, .line4{
+      font-size: 48px;
       white-space: normal;
     }
 }

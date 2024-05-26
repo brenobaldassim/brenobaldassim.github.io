@@ -3,21 +3,20 @@ import TerminalComponent from '../TerminalComponent.vue'
 </script>
 
 <template>
-    <div class="banner px-10">
-        <div class="presentation md:w-[769px]">
+    <div class="banner flex flex-col justify-center items-center px-10  md:w-[769px]">
+        <div class="presentation">
             <div class="greetings font-bold flex flex-col gap-2">
                 <TerminalComponent />
             </div>
             <div class="greetings-btns text-app-base flex flex-row justify-start w-full mt-8">
                 <a class="btn download-btn rounded-full p-4" target="_blank"
-                href="/src/assets/resume/RESUME_BRENO_2024.pdf">Download Resume</a>
+                    href="/src/assets/resume/RESUME_BRENO_2024.pdf">Download Resume</a>
             </div>
         </div>
     </div>
 </template>
 
 <style>
-
 .download-btn {
     width: 100%;
     background-color: transparent;
@@ -26,6 +25,7 @@ import TerminalComponent from '../TerminalComponent.vue'
     color: var(--app-color-white);
     box-shadow: -3px 0 5px 0 rgb(0, 0, 0, 0.5);
 }
+
 .download-btn:hover {
     color: var(--app-color-base);
     background-color: var(--app-color-white);

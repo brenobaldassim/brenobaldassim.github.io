@@ -9,8 +9,10 @@ export default {
       Roboto: ['Roboto Sans Pro', 'sans-serif']
     },
     colors: {
-      'app-base': '#000',
-      'app-base-light': "#2D3A3A",
+      'app-base': '#1D1D1D',
+      'app-base-light': '#3E3E3E',
+      'app-base-dark': '#111111',
+      'app-base-green': '#2D3A3A',
       'app-principal': '#248232',
       'app-secondary': '#2BA84A',
       'app-white': '#FCFFFC'

@@ -147,6 +147,7 @@ body {
   line-height: 1;
   text-rendering: optimizeSpeed;
   background-color: var(--app-color-base);
+  color: var(--app-color-white)
 }
 
 @font-face {

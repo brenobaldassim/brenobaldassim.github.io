@@ -25,7 +25,7 @@ const scrollToId = (id) =>{
         <a @click="scrollToId('contact')"><span>Contact</span></a>
       </li>
     </ul>
-    <div class="text-3xl mt-8 flex flex-row gap-0.5">
+    <div class="text-3xl mt-8 flex flex-row justify-center items-center gap-0.5">
       <a
         class="btn"
         target="_blank"
@@ -107,5 +107,4 @@ const scrollToId = (id) =>{
 .sidebar ul li a span:hover {
   color: var(--app-color-light);
 }
-
 </style>

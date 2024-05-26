@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   id: {
     type: String,
@@ -8,13 +10,22 @@ const props = defineProps({
   component: {
     type: Object,
     required: true,
+  },
+  bgColorBase: {
+    type: String,
+    required: true,
+    default: 'base'
   }
+})
+
+const bg = computed(() => {
+  return props.bgColorBase? 'bg-app-base' : 'bg-app-base';
 })
 </script>
 
 <template>
-  <section :id="props.id" class="text-app-secondary">
-    <div class="container">
+  <section :id="props.id">
+    <div class="container p-4" :class="bg">
       <component :is="props.component" />
     </div>
   </section>
@@ -28,7 +39,6 @@ const props = defineProps({
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    width: 90%;
 }
 
 section {
