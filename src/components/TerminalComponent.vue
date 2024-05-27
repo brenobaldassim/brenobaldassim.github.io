@@ -6,7 +6,7 @@
       <p class="line1">Breno</p>
       <p class="line2">Baldassim</p>
       <p class="line3">FullStack</p>
-      <p class="line4">Developer<span class="cursor text-8xl">_</span></p>
+      <p class="line4">Developer<span class="cursor text-7xl">_</span></p>
     </div>
   </div>
 </template>
@@ -41,10 +41,12 @@ span {
   color: var(--app-color-light);
   animation: type 0.5s 1s steps(9, end) both;
 }
+
 .line3 {
   color: #fff;
   animation: type 0.5s 1.5s steps(9, end) both;
 }
+
 .line4 {
   color: #fff;
   animation: type 0.5s 2s steps(9, end) both;
@@ -58,15 +60,19 @@ span {
   0% {
     opacity: 0;
   }
+
   40% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -76,18 +82,23 @@ span {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .cursor{
+  .cursor {
     font-size: 40px;
   }
-  .line1, .line2, .line3, .line4{
-      font-size: 48px;
-      white-space: normal;
-    }
+
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    font-size: 48px;
+    white-space: normal;
+  }
 }
 </style>

@@ -11,7 +11,7 @@ import { ref, computed } from 'vue';
 
 const display = ref(false);
 const displayOpt = computed(() => {
-    return display.value? 'block' : 'none';
+    return display.value ? 'block' : 'none';
 })
 const handleClick = () => {
     display.value = !display.value;
@@ -34,10 +34,6 @@ const handleClick = () => {
 </template>
 
 <style>
-html {
-    scroll-snap-type: y mandatory;
-}
-
 .btn:hover {
     transform: scale(1.1);
     transition: 0.5s;

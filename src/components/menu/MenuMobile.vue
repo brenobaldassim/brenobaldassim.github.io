@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
     <div id="menu-mobile" class="md:hidden" @click="$emit('handle-click')">
-        <div v-if="!isOpen"><i class='bx bx-menu'></i></div>
+        <div v-if="!props.isOpen"><i class='bx bx-menu'></i></div>
         <div v-else><i class='bx bxs-x-circle'></i></div>
     </div>
 </template>
