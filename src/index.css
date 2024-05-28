@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --app-color-base: #1D1D1D;
+  --app-color-base: #1d1d1d;
   --app-color-base-dark: #111111;
-  --app-color-base-light: #3E3E3E;
-  --app-color-base-green: #2D3A3A;
+  --app-color-base-light: #3e3e3e;
+  --app-color-base-green: #2d3a3a;
   --app-color-dark: #248232;
-  --app-color-light: #2BA84A;
-  --app-color-white: #FCFFFC;
+  --app-color-light: #2ba84a;
+  --app-color-white: #fcfffc;
 }
 
 *,
@@ -147,7 +147,7 @@ body {
   line-height: 1;
   text-rendering: optimizeSpeed;
   background-color: var(--app-color-base);
-  color: var(--app-color-white)
+  color: var(--app-color-white);
 }
 
 html {

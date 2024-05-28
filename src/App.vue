@@ -3,8 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="font-DM">
-  </header>
+  <header class="font-DM"></header>
   <RouterView />
 </template>
 

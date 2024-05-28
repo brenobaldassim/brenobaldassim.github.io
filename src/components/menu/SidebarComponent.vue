@@ -1,13 +1,13 @@
 <script setup>
-const scrollToId = (id) =>{
-    let e = document.getElementById(id);
-    e.scrollIntoView({behavior: "instant", inline:"nearest"});
+const scrollToId = (id) => {
+  let e = document.getElementById(id)
+  e.scrollIntoView({ behavior: 'instant', inline: 'nearest' })
 }
 </script>
 
 <template>
   <div class="sidebar font-Roboto flex flex-col items-center">
-    <h2 class="title"> <img src="/src/assets/breno-baldassim_logo.png"/> </h2>
+    <h2 class="title"><img src="/src/assets/breno-baldassim_logo.png" /></h2>
     <ul class="nav text-xl w-full">
       <li>
         <a @click="scrollToId('resume')"><span>Resume</span></a>
@@ -26,29 +26,24 @@ const scrollToId = (id) =>{
       </li>
     </ul>
     <div class="text-3xl mt-8 flex flex-row justify-center items-center gap-0.5">
-      <a
-        class="btn"
-        target="_blank"
-        href="https://github.com/brenobaldassim"
-      >
-        <i class='bx bxl-github'></i>
+      <a class="btn" target="_blank" href="https://github.com/brenobaldassim">
+        <i class="bx bxl-github"></i>
       </a>
       <a
         class="btn ml-1"
         target="_blank"
         href="https://www.linkedin.com/in/breno-baldassim-bb2138196/"
       >
-        <i class='bx bxl-linkedin'></i>
+        <i class="bx bxl-linkedin"></i>
       </a>
     </div>
   </div>
 </template>
 
 <style>
-
 .sidebar {
   position: fixed;
-  float:left;
+  float: left;
   top: 0;
   left: 0;
   z-index: 1;
@@ -63,7 +58,7 @@ const scrollToId = (id) =>{
   text-align: center;
   font-size: 20px;
   color: var(--app-color-base-light);
-  border-bottom: 1px solid rgb(95,95,95,0.25);
+  border-bottom: 1px solid rgb(95, 95, 95, 0.25);
   background-color: #000;
   padding: 20px;
   width: 100%;
@@ -81,10 +76,10 @@ const scrollToId = (id) =>{
   justify-content: center;
   padding: 20px;
   width: 100%;
-  border-bottom: 1px solid rgb(95,95,95,0.25);
+  border-bottom: 1px solid rgb(95, 95, 95, 0.25);
 }
 
-.sidebar ul li > a{
+.sidebar ul li > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +87,7 @@ const scrollToId = (id) =>{
   height: 100%;
 }
 
-.sidebar ul li a:hover{
+.sidebar ul li a:hover {
   margin-left: 20px;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
@@ -100,7 +95,7 @@ const scrollToId = (id) =>{
 
 .sidebar ul li a span {
   font-weight: 300;
-  color: #5F5F5F;
+  color: #5f5f5f;
 }
 
 .btn:hover,

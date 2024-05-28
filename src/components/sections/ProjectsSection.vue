@@ -1,11 +1,9 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-    <div >
-        <div class="text-8xl">TO DO: projects</div>
-    </div>
+  <div>
+    <div class="text-8xl">TO DO: projects</div>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

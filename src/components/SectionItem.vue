@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = defineProps({
   id: {
@@ -9,7 +9,7 @@ const props = defineProps({
   },
   component: {
     type: Object,
-    required: true,
+    required: true
   },
   bgColorBase: {
     type: String,
@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const bg = computed(() => {
-  return props.bgColorBase? 'bg-app-base' : 'bg-app-base';
+  return props.bgColorBase ? 'bg-app-base' : 'bg-app-base'
 })
 </script>
 
@@ -33,16 +33,16 @@ const bg = computed(() => {
 
 <style scoped>
 .container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 </style>
