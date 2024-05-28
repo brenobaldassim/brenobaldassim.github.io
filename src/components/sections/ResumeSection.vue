@@ -12,7 +12,7 @@ import TerminalComponent from '../TerminalComponent.vue'
         <a
           class="btn download-btn rounded-full p-4"
           target="_blank"
-          href="/src/assets/resume/RESUME_BRENO_2024.pdf"
+          href="https://drive.google.com/file/d/1Sq23fIjrsmwyncBdFEriZNvVuCQgPIjI/view?usp=sharing"
           >Download Resume</a
         >
       </div>

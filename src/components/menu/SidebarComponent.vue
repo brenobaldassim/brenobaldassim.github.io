@@ -7,7 +7,7 @@ const scrollToId = (id) => {
 
 <template>
   <div class="sidebar font-Roboto flex flex-col items-center">
-    <h2 class="title"><img src="/src/assets/breno-baldassim_logo.png" /></h2>
+    <h2 class="title"><img src="/public/breno-baldassim_logo.png" /></h2>
     <ul class="nav text-xl w-full">
       <li>
         <a @click="scrollToId('resume')"><span>Resume</span></a>
