@@ -25,7 +25,7 @@ const bg = computed(() => {
 
 <template>
   <section :id="props.id">
-    <div class="container p-4" :class="bg">
+    <div class="container p-11 md:p-4" :class="bg">
       <component :is="props.component" />
     </div>
   </section>

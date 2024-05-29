@@ -5,7 +5,7 @@ const props = defineProps({
   animationType: {
     type: String,
     required: true,
-    default: 'slide-fade'
+    default: 'slide-fade-right'
   }
 })
 
@@ -37,19 +37,28 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.animated-component.slide-fade-enter-from {
+.animated-component.slide-fade-left-enter-from
+.animated-component.slide-fade-right-enter-from {
   transition: none;
 }
 
 /* Fade animation */
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 500ms ease-out;
+.slide-fade-left-enter-active,
+.slide-fade-left-leave-active,
+.slide-fade-right-enter-active,
+.slide-fade-right-leave-active {
+  transition: all 600ms ease-out;
 }
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
+.slide-fade-right-enter-from,
+.slide-fade-right-leave-to {
   transform: translateX(-50px);
+  opacity: 0;
+}
+
+.slide-fade-left-enter-from,
+.slide-fade-left-leave-to {
+  transform: translateX(50px);
   opacity: 0;
 }
 </style>

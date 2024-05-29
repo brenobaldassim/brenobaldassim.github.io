@@ -1,12 +1,12 @@
 <script setup>
-import TerminalComponent from '../TerminalComponent.vue'
+import Presentation from '../PresentationComponent.vue'
 </script>
 
 <template>
-  <div class="banner flex flex-col justify-center items-center px-10 md:w-[769px]">
+  <div class="banner flex flex-col justify-center items-center">
     <div class="presentation">
       <div class="greetings font-bold flex flex-col gap-2">
-        <TerminalComponent />
+        <Presentation />
       </div>
       <div class="greetings-btns text-app-base flex flex-row justify-start w-full mt-8">
         <a
