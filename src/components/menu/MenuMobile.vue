@@ -11,7 +11,6 @@ const props = defineProps({
 <template>
   <div id="menu-mobile" class="md:hidden" @click="$emit('handle-click')">
     <div v-if="!props.isOpen"><i class="bx bx-menu"></i></div>
-    <div v-else><i class="bx bxs-x-circle"></i></div>
   </div>
 </template>
 
@@ -26,8 +25,5 @@ const props = defineProps({
   margin: 16px 0 0 8px;
   font-size: 36px;
   color: var(--app-color-white);
-}
-.bxs-x-circle {
-  transform: translateX(+200px);
 }
 </style>

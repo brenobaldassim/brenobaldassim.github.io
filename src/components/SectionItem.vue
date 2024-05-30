@@ -1,6 +1,4 @@
 <script setup>
-import { computed } from 'vue'
-
 const props = defineProps({
   id: {
     type: String,
@@ -10,22 +8,13 @@ const props = defineProps({
   component: {
     type: Object,
     required: true
-  },
-  bgColorBase: {
-    type: String,
-    required: true,
-    default: 'base'
   }
-})
-
-const bg = computed(() => {
-  return props.bgColorBase ? 'bg-app-base' : 'bg-app-base'
 })
 </script>
 
 <template>
   <section :id="props.id">
-    <div class="container p-11 md:p-4" :class="bg">
+    <div class="container p-11 md:p-4">
       <component :is="props.component" />
     </div>
   </section>

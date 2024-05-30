@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue'
 const props = defineProps({
   animationType: {
     type: String,
-    required: true,
+    required: false,
     default: 'slide-fade-right'
   }
 })
@@ -37,8 +37,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.animated-component.slide-fade-left-enter-from
-.animated-component.slide-fade-right-enter-from {
+.animated-component.slide-fade-left-enter-from .animated-component.slide-fade-right-enter-from {
   transition: none;
 }
 

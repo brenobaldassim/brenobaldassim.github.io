@@ -1,51 +1,65 @@
 <script setup>
+import { computed } from 'vue'
 const scrollToId = (id) => {
   let e = document.getElementById(id)
   e.scrollIntoView({ behavior: 'instant', inline: 'nearest' })
 }
+const props = defineProps({
+  display: {
+    type: Boolean,
+    required: true
+  }
+})
 </script>
 
 <template>
-  <div class="sidebar font-Roboto flex flex-col items-center">
-    <h2 class="title"><img src="/public/breno-baldassim_logo.png" /></h2>
-    <ul class="nav text-xl w-full">
-      <li>
-        <a @click="scrollToId('resume')"><span>Resume</span></a>
-      </li>
-      <li>
-        <a @click="scrollToId('about-me')"><span>About Me</span></a>
-      </li>
-      <li>
-        <a @click="scrollToId('my-skills')"><span>My Skills</span></a>
-      </li>
-      <li>
-        <a @click="scrollToId('projects')"><span>Projects</span></a>
-      </li>
-      <li>
-        <a @click="scrollToId('contact')"><span>Contact</span></a>
-      </li>
-    </ul>
-    <div class="text-3xl mt-8 flex flex-row justify-center items-center gap-0.5">
-      <a class="btn" target="_blank" href="https://github.com/brenobaldassim">
-        <i class="bx bxl-github"></i>
-      </a>
-      <a
-        class="btn ml-1"
-        target="_blank"
-        href="https://www.linkedin.com/in/breno-baldassim-bb2138196/"
-      >
-        <i class="bx bxl-linkedin"></i>
-      </a>
+  <div id="sidebar" class="max-md:w-full" @click="$emit('handle-click', $event)">
+    <div class="content font-Roboto flex flex-col items-center">
+      <h2 class="title"><img src="/public/breno-baldassim_logo.png" /></h2>
+      <ul class="nav text-xl w-full">
+        <li>
+          <a @click="scrollToId('resume')"><span>Resume</span></a>
+        </li>
+        <li>
+          <a @click="scrollToId('about-me')"><span>About Me</span></a>
+        </li>
+        <li>
+          <a @click="scrollToId('my-skills')"><span>My Skills</span></a>
+        </li>
+        <li>
+          <a @click="scrollToId('projects')"><span>Projects</span></a>
+        </li>
+        <li>
+          <a @click="scrollToId('contact')"><span>Contact</span></a>
+        </li>
+      </ul>
+      <div class="text-3xl mt-8 flex flex-row justify-center items-center gap-0.5">
+        <a class="btn" target="_blank" href="https://github.com/brenobaldassim">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a
+          class="btn ml-1"
+          target="_blank"
+          href="https://www.linkedin.com/in/breno-baldassim-bb2138196/"
+        >
+          <i class="bx bxl-linkedin"></i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
-.sidebar {
+#sidebar {
   position: fixed;
   float: left;
   top: 0;
   left: 0;
+  height: 100%;
+  z-index: 1;
+  transition: all 300ms ease-out;
+}
+.content {
   z-index: 1;
   width: 200px;
   height: 100%;
@@ -53,7 +67,6 @@ const scrollToId = (id) => {
   color: var(--app-color-base-light);
   box-shadow: -3px 0 5px 0 #000;
 }
-
 .title {
   text-align: center;
   font-size: 20px;
@@ -71,7 +84,7 @@ const scrollToId = (id) => {
   transition-timing-function: ease-out;
 }
 
-.sidebar ul li {
+#sidebar ul li {
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -79,27 +92,28 @@ const scrollToId = (id) => {
   border-bottom: 1px solid rgb(95, 95, 95, 0.25);
 }
 
-.sidebar ul li > a {
+#sidebar ul li > a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  user-select: none;
 }
 
-.sidebar ul li a:hover {
+#sidebar ul li a:hover {
   margin-left: 20px;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
 }
 
-.sidebar ul li a span {
+#sidebar ul li a span {
   font-weight: 300;
   color: #5f5f5f;
 }
 
 .btn:hover,
-.sidebar ul li a span:hover {
+#sidebar ul li a span:hover {
   color: var(--app-color-light);
 }
 </style>
