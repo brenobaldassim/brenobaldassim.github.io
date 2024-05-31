@@ -1,12 +1,8 @@
 <script setup>
 import SidebarComponent from '@/components/menu/SidebarComponent.vue'
-import ResumeSection from '@/components/sections/ResumeSection.vue'
 import SectionItem from '@/components/SectionItem.vue'
-import AboutMeSection from '@/components/sections/AboutMeSection.vue'
-import ProjectsSection from '@/components/sections/ProjectsSection.vue'
-import MySkillsSection from '@/components/sections/MySkillsSection.vue'
-import ContactSection from '@/components/sections/ContactSection.vue'
 import MenuMobile from '@/components/menu/MenuMobile.vue'
+import { sectionOptions } from '@/utils-js/constants'
 import { ref, computed } from 'vue'
 
 const display = ref(false)
@@ -19,29 +15,6 @@ const handleClickMenuIcon = () => {
 const handleClickSideBar = (event) => {
   if (event.target.id === 'sidebar') display.value = false
 }
-
-const sections = [
-  {
-    id: 'resume',
-    component: ResumeSection
-  },
-  {
-    id: 'about-me',
-    component: AboutMeSection
-  },
-  {
-    id: 'my-skills',
-    component: MySkillsSection
-  },
-  {
-    id: 'projects',
-    component: ProjectsSection
-  },
-  {
-    id: 'contact',
-    component: ContactSection
-  }
-]
 </script>
 
 <template>
@@ -50,7 +23,7 @@ const sections = [
     <SidebarComponent :class="displayOpt" :display="display" @handle-click="handleClickSideBar" />
     <div class="main">
       <SectionItem
-        v-for="section in sections"
+        v-for="section in sectionOptions"
         :key="section.id"
         :id="section.id"
         :component="section.component"

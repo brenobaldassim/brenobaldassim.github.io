@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { sectionOptions } from '@/utils-js/constants'
 const scrollToId = (id) => {
   let e = document.getElementById(id)
   e.scrollIntoView({ behavior: 'instant', inline: 'nearest' })
@@ -17,21 +17,7 @@ const props = defineProps({
     <div class="content font-Roboto flex flex-col items-center">
       <h2 class="title"><img src="/public/breno-baldassim_logo.png" /></h2>
       <ul class="nav text-xl w-full">
-        <li>
-          <a @click="scrollToId('resume')"><span>Resume</span></a>
-        </li>
-        <li>
-          <a @click="scrollToId('about-me')"><span>About Me</span></a>
-        </li>
-        <li>
-          <a @click="scrollToId('my-skills')"><span>My Skills</span></a>
-        </li>
-        <li>
-          <a @click="scrollToId('projects')"><span>Projects</span></a>
-        </li>
-        <li>
-          <a @click="scrollToId('contact')"><span>Contact</span></a>
-        </li>
+        <li v-for="opt in sectionOptions" @click="scrollToId(opt.id)">{{ opt.title }}</li>
       </ul>
       <div class="text-3xl mt-8 flex flex-row justify-center items-center gap-0.5">
         <a class="btn" target="_blank" href="https://github.com/brenobaldassim">
@@ -63,6 +49,7 @@ const props = defineProps({
   z-index: 1;
   width: 200px;
   height: 100%;
+  text-align: left;
   background: var(--app-color-base-dark);
   color: var(--app-color-base-light);
   box-shadow: -3px 0 5px 0 #000;
@@ -71,7 +58,6 @@ const props = defineProps({
   text-align: center;
   font-size: 20px;
   color: var(--app-color-base-light);
-  border-bottom: 1px solid rgb(95, 95, 95, 0.25);
   background-color: #000;
   padding: 20px;
   width: 100%;
@@ -84,36 +70,39 @@ const props = defineProps({
   transition-timing-function: ease-out;
 }
 
+#sidebar ul {
+  background-color: var(--app-color-dark);
+}
+
 #sidebar ul li {
   display: flex;
   justify-content: center;
   padding: 20px;
   width: 100%;
-  border-bottom: 1px solid rgb(95, 95, 95, 0.25);
-}
-
-#sidebar ul li > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  user-select: none;
-}
-
-#sidebar ul li a:hover {
-  margin-left: 20px;
-  transition: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
-#sidebar ul li a span {
+  transition: transform 0.3s ease-in-out;
   font-weight: 300;
   color: #5f5f5f;
+  background-color: var(--app-color-base-dark);
+}
+
+#sidebar ul li:hover {
+  background-color: var(--app-color-dark);
+  transform: translateX(20px);
 }
 
 .btn:hover,
-#sidebar ul li a span:hover {
-  color: var(--app-color-light);
+#sidebar ul li:hover {
+  color: var(--app-color-white);
+  cursor: pointer;
+}
+
+@media (max-height: 768px) {
+  #sidebar ul li {
+    font-size: 16px;
+    padding: 12px;
+  }
+  #sidebar .content > div > a {
+    font-size: 24px;
+  }
 }
 </style>

@@ -4,7 +4,7 @@ import SectionLayout from '../utils/SectionLayout.vue'
 </script>
 
 <template>
-  <SectionLayout :title="'MY SKILLS'">
+  <SectionLayout>
     <div class="card-wrapper">
       <div
         class="mt-4 md:mt-20 grid gap-2 md:gap-4 max-2xl:grid-rows-2 max-md:grid-cols-2 md:grid-flow-col md:auto-cols-fr"

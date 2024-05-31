@@ -3,7 +3,7 @@ import SectionLayout from '../utils/SectionLayout.vue'
 </script>
 
 <template>
-  <SectionLayout :title="'ABOUT ME'">
+  <SectionLayout>
     <div class="text-xl md:text-2xl text-left text-app-white w-full mt-4 md:mt-20">
       <p class="whitespace-normal">
         <span class="text-app-secondary">></span> Fullstack Web Developer experienced with Vue.js,
