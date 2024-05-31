@@ -1,15 +1,14 @@
 <script setup>
-import { getCurrentInstance, onMounted, ref } from 'vue'
+import { inject, onMounted, ref } from 'vue'
 import Animation from '../utils/AnimationComponent.vue'
 import Terminal from '../utils/TerminalComponent.vue'
 import { sectionOptions } from '@/utils-js/constants'
 
 const title = ref('section')
+const id = inject('id')
 
 onMounted(() => {
-  const sectionParent = getCurrentInstance().parent.parent.ctx
-  if (sectionParent.id.length > 0)
-    title.value = sectionOptions.find((opt) => opt.id === sectionParent.id).title.toUpperCase()
+  if (id) title.value = sectionOptions.find((opt) => opt.id === id).title.toUpperCase()
 })
 </script>
 

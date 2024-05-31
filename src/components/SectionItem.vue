@@ -1,4 +1,5 @@
 <script setup>
+import { provide } from 'vue'
 const props = defineProps({
   id: {
     type: String,
@@ -10,6 +11,7 @@ const props = defineProps({
     required: true
   }
 })
+provide('id', props.id)
 </script>
 
 <template>
