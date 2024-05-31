@@ -35,7 +35,7 @@ const handleClickSideBar = (event) => {
 
 <style>
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s;
   transition-timing-function: ease-in-out;
 }

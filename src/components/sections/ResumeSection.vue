@@ -8,7 +8,9 @@ import Presentation from '../PresentationComponent.vue'
       <div class="greetings font-bold flex flex-col gap-2">
         <Presentation />
       </div>
-      <div class="greetings-btns text-app-base flex flex-row justify-start w-full mt-8">
+      <div
+        class="greetings-btns text-app-base hover:text-lg flex flex-row justify-start w-full mt-8"
+      >
         <a
           class="btn download-btn rounded-full p-4"
           target="_blank"
@@ -34,6 +36,7 @@ import Presentation from '../PresentationComponent.vue'
   color: var(--app-color-base);
   background-color: var(--app-color-white);
   border-color: var(--app-color-white);
+  line-height: normal;
 }
 
 .greetings-btns {

@@ -90,10 +90,13 @@ const props = defineProps({
   transform: translateX(20px);
 }
 
-.btn:hover,
 #sidebar ul li:hover {
   color: var(--app-color-white);
   cursor: pointer;
+}
+
+#sidebar .content > div > a:hover {
+  color: var(--app-color-dark);
 }
 
 @media (max-height: 768px) {
