@@ -6,7 +6,7 @@
       <p class="line1">Breno</p>
       <p class="line2">Baldassim</p>
       <p class="line3">FullStack</p>
-      <p class="line4">Developer<span class="cursor text-8xl">_</span></p>
+      <p class="line4">Developer<span class="cursor text-7xl">_</span></p>
     </div>
   </div>
 </template>

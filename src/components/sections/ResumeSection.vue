@@ -9,7 +9,7 @@ import Presentation from '../PresentationComponent.vue'
         <Presentation />
       </div>
       <div
-        class="greetings-btns text-app-base hover:text-lg flex flex-row justify-start w-full mt-8"
+        class="greetings-btns text-app-base hover:text-lg flex flex-row justify-start w-full"
       >
         <a
           class="btn download-btn rounded-full p-4"
@@ -38,7 +38,11 @@ import Presentation from '../PresentationComponent.vue'
   border-color: var(--app-color-white);
   line-height: normal;
 }
-
+.presentation{
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto 100px;
+}
 .greetings-btns {
   animation: fadeIn 5s;
 }
