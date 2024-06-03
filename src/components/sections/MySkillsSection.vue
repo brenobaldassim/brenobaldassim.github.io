@@ -9,6 +9,7 @@ import SectionLayout from '../utils/SectionLayout.vue'
       <div
         class="mt-4 md:mt-20 grid gap-2 md:gap-4 max-2xl:grid-rows-2 max-md:grid-cols-2 md:grid-flow-col md:auto-cols-fr"
       >
+        <!-- SVGS TRANSFORMED INTO CSS CLASS -->
         <CardItem :name="'HTML5'">
           <i class="bx bxl-html5"></i>
         </CardItem>
