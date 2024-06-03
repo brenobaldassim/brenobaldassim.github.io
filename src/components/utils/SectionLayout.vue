@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <div class="h-full w-full min-w-72 min-h-[540px] flex flex-col items-center justify-center">
-    <Animation class="md:min-h-[40%] w-full max-md:h-full">
+    <Animation class="md:min-h-[40%] w-full">
       <Terminal :title="title">
         <slot />
       </Terminal>
