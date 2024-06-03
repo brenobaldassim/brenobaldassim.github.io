@@ -1,2 +1,2 @@
-import { gh_instance } from "./github/axios";
-export default gh_instance;
+import { github_instance } from "./github/axios.config";
+export default github_instance;
