@@ -1,5 +1,6 @@
 <script setup>
 import SectionLayout from '../utils/SectionLayout.vue'
+import UnderscoreBlink from '../utils/UnderscoreBlink.vue'
 </script>
 
 <template>
@@ -13,10 +14,9 @@ import SectionLayout from '../utils/SectionLayout.vue'
         <span class="text-app-secondary">></span> I'm a creative, problem solver, dedicated team
         player developer with good comunications skills
       </p>
-      <p class="whitespace-normal">
-        <span class="text-app-secondary">></span> I'm passionate about technology, optimization,
-        music and sports<span class="cursor text-xl md:text-2xl">_</span>
-      </p>
+      <UnderscoreBlink>
+        <span> I'm passionate about technology, optimization,music and sports</span>
+      </UnderscoreBlink>
     </div>
   </SectionLayout>
 </template>
@@ -25,31 +25,5 @@ import SectionLayout from '../utils/SectionLayout.vue'
 #terminal:hover {
   transform: scale(1.01);
   transition: 300ms ease;
-}
-
-.cursor {
-  animation: blink 1s 0s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 </style>

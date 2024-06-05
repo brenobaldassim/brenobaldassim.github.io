@@ -1,6 +1,41 @@
 <script setup>
-import CardItem from '../utils/CardItem.vue'
+import Card from '../utils/CardItem.vue'
 import SectionLayout from '../utils/SectionLayout.vue'
+
+const techs = [
+  {
+    name: 'HTML5',
+    class: 'bx bxl-html5'
+  },
+  {
+    name: 'CSS3',
+    class: 'bx bxl-css3'
+  },
+  {
+    name: 'Vue.js',
+    class: 'bx bxl-vuejs'
+  },
+  {
+    name: 'Tailwindcss',
+    class: 'bx bxl-tailwind-css'
+  },
+  {
+    name: 'Javascript',
+    class: 'bx bxl-javascript'
+  },
+  {
+    name: 'Node.js',
+    class: 'bx bxl-nodejs'
+  },
+  {
+    name: 'Laravel',
+    class: 'bx bxl-php'
+  },
+  {
+    name: 'Docker',
+    class: 'bx bxl-docker'
+  }
+]
 </script>
 
 <template>
@@ -10,30 +45,10 @@ import SectionLayout from '../utils/SectionLayout.vue'
         class="mt-4 md:mt-20 grid gap-2 md:gap-4 max-2xl:grid-rows-2 max-md:grid-cols-2 md:grid-flow-col md:auto-cols-fr"
       >
         <!-- SVGS TRANSFORMED INTO CSS CLASS -->
-        <CardItem :name="'HTML5'">
-          <i class="bx bxl-html5"></i>
-        </CardItem>
-        <CardItem :name="'CSS3'">
-          <i class="bx bxl-css3"></i>
-        </CardItem>
-        <CardItem :name="'Vue.js'">
-          <i class="bx bxl-vuejs"></i>
-        </CardItem>
-        <CardItem :name="'Tailwindcss'">
-          <i class="bx bxl-tailwind-css"></i>
-        </CardItem>
-        <CardItem :name="'Javascript'">
-          <i class="bx bxl-javascript"></i>
-        </CardItem>
-        <CardItem :name="'Node.js'">
-          <i class="bx bxl-nodejs"></i>
-        </CardItem>
-        <CardItem :name="'Laravel'">
-          <i class="bx bxl-php"></i>
-        </CardItem>
-        <CardItem :name="'Docker'">
-          <i class="bx bxl-docker"></i>
-        </CardItem>
+        <Card class="text-4xl md:text-8xl" v-for="tech in techs">
+          <h1 class="text-base">{{ tech.name }}</h1>
+          <i :class="tech.class"></i>
+        </Card>
       </div>
     </div>
   </SectionLayout>
