@@ -6,7 +6,7 @@ import github_instance from '@/api'
 const repos = ref([{}])
 
 const getRepos = async () => {
-  let response = await github_instance.get('/user/repos')
+  let response = await github_instance.get('/users/brenobaldassim/repos')
   repos.value = response.data
     .filter((repo) => repo.name.split('-')[0] === 'portifolio')
     .map((repo) => {
