@@ -88,6 +88,7 @@ const props = defineProps({
 #sidebar ul li:hover {
   background-color: var(--app-color-dark);
   transform: translateX(20px);
+  user-select: none;
 }
 
 #sidebar ul li:hover {

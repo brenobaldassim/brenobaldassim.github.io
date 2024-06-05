@@ -4,6 +4,13 @@ import Animation from '../utils/AnimationComponent.vue'
 import Terminal from '../utils/TerminalComponent.vue'
 import { sectionOptions } from '@/utils-js/constants'
 
+const props = defineProps({
+  animationType: {
+    type: String,
+    required: false,
+    default: 'slide-fade-right'
+  }
+})
 const title = ref('section')
 const id = inject('id')
 
@@ -14,7 +21,7 @@ onMounted(() => {
 
 <template>
   <div class="h-full w-full min-w-72 min-h-[540px] flex flex-col items-center justify-center">
-    <Animation class="md:min-h-[40%] w-full">
+    <Animation class="md:min-h-[40%] w-full" :animation-type="animationType">
       <Terminal :title="title">
         <slot />
       </Terminal>
