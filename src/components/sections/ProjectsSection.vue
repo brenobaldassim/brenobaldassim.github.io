@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import SectionLayout from '../utils/SectionLayout.vue'
+import CardProjects from '../utils/CardProjects.vue'
 import github_instance from '@/api'
 
 const repos = ref([{}])
@@ -12,7 +13,8 @@ const getRepos = async () => {
     .map((repo) => {
       return {
         name: formatRepoName(repo.name),
-        languages: repo.language,
+        description: repo.description,
+        language: repo.language,
         url: repo.html_url
       }
     })
@@ -30,7 +32,9 @@ onMounted(() => {
 
 <template>
   <SectionLayout>
-    <div>{{ repos }}</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 p-2 gap-4">
+      <CardProjects v-for="project in repos" :project="project" />
+    </div>
   </SectionLayout>
 </template>
 
