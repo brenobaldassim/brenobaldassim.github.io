@@ -34,18 +34,18 @@ onMounted(() => {
 
 <template>
   <SectionLayout>
-    <div class="grid grid-cols-1 md:grid-cols-2 p-2 gap-4">
+    <div class="mt-4 md:mt-20 grid grid-cols-1 md:grid-cols-2 p-2 gap-4">
       <template v-for="(project, index) in repos">
         <Card v-if="index < 4">
           <a :href="project.url" target="_blank">
             <div class="w-full h-fit p-2 rounded">
               <UnderscoreBlink>
-                <span class="uppercase"> {{ project.name }}</span>
+                <span class="md:text-xl uppercase"> {{ project.name }}</span>
               </UnderscoreBlink>
             </div>
             <div>
-              <i class="text-2xl bx bx-link-external"></i>
-              <div class="h-full flex items-end justify-end">
+              <i class="text-xs md:text-lg bx bx-link-external"></i>
+              <div class="flex items-end justify-end">
                 <Tag> {{ project.language }} </Tag>
               </div>
             </div>
@@ -62,4 +62,18 @@ onMounted(() => {
   color: var(--app-color-light);
   border-color: var(--app-color-light);
 }
+#blink {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  #blink {
+    font-size: 8px;
+  }
+  #tag {
+    font-size: 8px;
+  }
+}
+
 </style>

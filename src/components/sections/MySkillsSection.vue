@@ -45,9 +45,9 @@ const techs = [
         class="mt-4 md:mt-20 grid gap-2 md:gap-4 max-2xl:grid-rows-2 max-md:grid-cols-2 md:grid-flow-col md:auto-cols-fr"
       >
         <!-- SVGS TRANSFORMED INTO CSS CLASS -->
-        <Card class="text-4xl md:text-8xl" v-for="tech in techs">
+        <Card v-for="tech in techs">
           <h1 class="text-base">{{ tech.name }}</h1>
-          <i :class="tech.class"></i>
+          <i class="text-4xl md:text-8xl" :class="tech.class"></i>
         </Card>
       </div>
     </div>

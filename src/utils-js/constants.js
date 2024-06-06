@@ -26,8 +26,8 @@ export const sectionOptions = [
     component: ProjectsSection
   },
   {
-    id: 'contact-me',
-    title: 'Contact Me',
+    id: 'contact',
+    title: 'Contact',
     component: ContactSection
   }
 ]

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <p class="whitespace-normal">
+  <p id="blink" class="whitespace-normal w-full">
     <span class="text-app-secondary">></span>
     <slot />
     <span class="cursor">_</span>
